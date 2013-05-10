@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5">
+  <servlet>
+    <servlet-name>CustomerRecordLocator</servlet-name>
+    <servlet-class>com.demo.customer.SampleCustomerLocatorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CustomerFeeder</servlet-name>
+    <servlet-class>com.demo.customer.CustomerFeedServlet</servlet-class>
+  </servlet>  
+  <servlet>
+    <servlet-name>ContentFeeder</servlet-name>
+  <servlet-class>com.demo.customer.ContentFeedController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerRecordLocator</servlet-name>
+    <url-pattern>/customerlocator</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CustomerFeeder</servlet-name>
+  <url-pattern>/customerfeeder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContentFeeder</servlet-name>
+  <url-pattern>/contentfeed</url-pattern>
+  </servlet-mapping>    
+</web-app>
+
